@@ -3,12 +3,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html {
+      scroll-behavior: smooth;
+    }
+  
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+  }
 
-.header{
-       background: linear-gradient(to bottom ,#0c854a, #bbb);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 .img {
   height: 100%;
   width: 500px;
