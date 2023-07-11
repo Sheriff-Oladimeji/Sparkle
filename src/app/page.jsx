@@ -31,7 +31,7 @@ const page = () => {
             </Link>
           </div>
 
-          <div className="hidden md:block flex-1 ">
+          <div className="block flex-1 ">
             <Image
               src="/hero.png"
               alt="hero"
