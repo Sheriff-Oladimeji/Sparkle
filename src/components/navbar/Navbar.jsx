@@ -44,7 +44,7 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 z-50 w-full bg-white shadow-md md:shadow-none md:relative">
       {/* desktop nav */}
       <div className="hidden w-[90%] mx-auto text-black md:flex justify-between items-center h-16">
-        <h1 className="font-bold font-lato text-4xl">Sparkle</h1>
+        <h1 className="font-bold  text-4xl">Sparkle</h1>
         <div className="flex gap-8">
           {links.map((link) => (
             <div key={link.id} className="flex font-bold">
@@ -61,7 +61,7 @@ const Navbar = () => {
 
       {/* mobile nav */}
       <div className="w-11/12 mx-auto flex justify-between items-center md:hidden h-[70px]">
-        <h1 className="font-bold font-lato text-3xl">Sparkle</h1>
+        <h1 className="font-bold  text-3xl">Sparkle</h1>
         <button onClick={handleNav} className="duration-500">
           {nav ? <VscChromeClose size={30} /> : <HiOutlineMenuAlt3 size={30} />}
         </button>
