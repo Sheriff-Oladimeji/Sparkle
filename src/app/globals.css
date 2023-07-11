@@ -3,6 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 .header{
        background: linear-gradient(to bottom ,#0c854a, #bbb);
   -webkit-background-clip: text;

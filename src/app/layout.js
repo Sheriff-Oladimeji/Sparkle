@@ -1,5 +1,6 @@
 import Navbar from "@/components/navbar/Navbar";
 import "./globals.css";
+import Footer from "@/components/footer/Footer";
 
 export const metadata = {
   title: "Sparkle",
@@ -9,9 +10,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="font-mont">
+      <body className="font-mont flex flex-col justify-between min-h-screen">
         <Navbar/>
-        {children}</body>
+        {children}
+        <Footer/>
+      </body>
     </html>
   );
 }
