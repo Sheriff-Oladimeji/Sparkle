@@ -59,7 +59,7 @@ const Navbar = () => {
       {/* mobile nav */}
       <div className="w-11/12 mx-auto flex justify-between items-center md:hidden h-[70px]">
         <h1 className="font-bold  text-3xl">Sparkle</h1>
-        <button onClick={handleNav} className="duration-500">
+        <button onClick={handleNav} className="outline-none border-none background-none">
           {nav ? <VscChromeClose size={30} /> : <HiOutlineMenuAlt3 size={30} />}
         </button>
       </div>

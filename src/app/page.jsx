@@ -14,8 +14,8 @@ const page = () => {
     <section className="pt-24 md:pt-0 font-mont">
       <div className="w-[90%] mx-auto">
         <header className="flex flex-col md:flex-row md:items-center  md:gap-[100px]">
-          <div className="flex flex-col gap-3 mx-auto  md:flex-1  w-full md:mt-0 text-center md:text-left">
-            <h1 className="text-3xl  sm:text-4xl md:text-5xl font-bold   w-full  ">
+          <div className="flex flex-col gap-3 mx-auto md:flex-1 w-full md:mt-0 text-center md:text-left md:items-start md:justify-center">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold w-full">
               Unleash Your Creative Potential with our Expertise
             </h1>
 
@@ -24,12 +24,13 @@ const page = () => {
               power of creativity to elevate your brand and captivate your
               audience.
             </p>
-            <Link href="/portfolio" alt="" >
-              <button className="border-none bg-green text-white font-bold p-4 rounded-lg flex items-center gap-4 mt-4 ">
+            <Link href="/portfolio" alt="">
+              <button className="border-none bg-green text-white font-bold p-4 rounded-lg flex items-center gap-4 mt-4 mx-auto">
                 See Our Works <BsArrowRight size={25} />
               </button>
             </Link>
           </div>
+
           <div className="hidden md:block flex-1 ">
             <Image
               src="/hero.png"
