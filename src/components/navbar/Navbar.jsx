@@ -1,5 +1,9 @@
+"use client"
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
+import { VscChromeClose } from "react-icons/vsc";
+import { HiOutlineMenuAlt3 } from "react-icons/hi";
+import {FaFacebookF, FaGithub, FaTwitter} from "react-icons/fa"
 
 const links = [
   {
@@ -30,24 +34,60 @@ const links = [
 ];
 
 const Navbar = () => {
-  return (
-    <nav className=" fixed top-0 left-0 z-50 w-full bg-dark shadow-md border-b border-[#232323]">
-      {/* desktop nav */}
-      <div className=" hidden w-4/5 mx-auto text-white md:flex justify-between items-center h-16">
-        <h1 className="font-bold font-lato text-4xl">Sparkle</h1>
+  const [nav, setNav] = useState(false);
 
+  const handleNav = () => {
+    setNav(!nav);
+  };
+
+  return (
+    <nav className="fixed top-0 left-0 z-50 w-full bg-white shadow-md md:shadow-none md:relative">
+      {/* desktop nav */}
+      <div className="hidden w-[90%] mx-auto text-black md:flex justify-between items-center h-16">
+        <h1 className="font-bold font-lato text-4xl">Sparkle</h1>
         <div className="flex gap-8">
           {links.map((link) => (
-            <div key={link.id} className="flex">
-              <Link href={link.url}>{link.title}</Link>
+            <div key={link.id} className="flex font-bold">
+              <Link
+                href={link.url}
+                className="text-[16px] hover:text-amber-700"
+              >
+                {link.title}
+              </Link>
             </div>
           ))}
         </div>
       </div>
 
       {/* mobile nav */}
-      <div className="w-11/12 mx-auto text-white flex justify-between items-center md:hidden h-[70px]">
+      <div className="w-11/12 mx-auto flex justify-between items-center md:hidden h-[70px]">
         <h1 className="font-bold font-lato text-3xl">Sparkle</h1>
+        <button onClick={handleNav} className="duration-500">
+          {nav ? <VscChromeClose size={30} /> : <HiOutlineMenuAlt3 size={30} />}
+        </button>
+      </div>
+
+      <div
+        className={`${
+          nav ? "h-screen" : "h-0"
+        } overflow-hidden transition-all duration-500 md:hidden`}
+      >
+        <div className="flex flex-col gap-8 z-50 pt-12 px-8">
+          {links.map((link) => (
+            <Link
+              href={link.url}
+              className="text-[16px] hover:text-amber-600 font-bold hover:pl-3 duration-200"
+              key={link.id}
+            >
+              {link.title}
+            </Link>
+          ))}
+        </div>
+        <div className="flex items-center px-8 gap-6 mt-16">
+      <Link href="#"><FaFacebookF size={25}  className="hover:text-amber-600"/></Link>
+      <Link href="#"><FaTwitter size={25} className="hover:text-amber-600"/></Link>
+      <Link href="#"><FaGithub size={25} className="hover:text-amber-600"/></Link>
+        </div>
       </div>
     </nav>
   );
