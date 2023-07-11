@@ -12,8 +12,7 @@ module.exports = {
         mont: ["Montserrat", "sans-serif"],
       },
       colors: {
-        dark: "#1D1D1D",
-        lightGray: "#B8B6B8",
+        green: "#53C38B",
       },
     },
   },

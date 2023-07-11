@@ -4,8 +4,24 @@
 @tailwind utilities;
 
 .header{
-       background: linear-gradient(to bottom ,#239960, #bbb);
+       background: linear-gradient(to bottom ,#0c854a, #bbb);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+.img {
+  height: 100%;
+  width: 500px;
+  object-fit: contain;
+  animation: move 3s infinite ease alternate;
+}
+
+@keyframes move {
+  from {
+    transform: translateY(-10px);
+  }
+
+  to {
+    transform: translateY(10px);
+  }
 }
 

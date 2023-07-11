@@ -48,10 +48,7 @@ const Navbar = () => {
         <div className="flex gap-8">
           {links.map((link) => (
             <div key={link.id} className="flex font-bold">
-              <Link
-                href={link.url}
-                className="text-[16px] hover:text-amber-700"
-              >
+              <Link href={link.url} className="text-[16px] hover:text-green">
                 {link.title}
               </Link>
             </div>
@@ -76,7 +73,7 @@ const Navbar = () => {
           {links.map((link) => (
             <Link
               href={link.url}
-              className="text-[16px] hover:text-amber-600 font-bold hover:pl-3 duration-200"
+              className="text-[16px] hover:text-green font-bold hover:pl-3 duration-200"
               key={link.id}
             >
               {link.title}
@@ -84,9 +81,15 @@ const Navbar = () => {
           ))}
         </div>
         <div className="flex items-center px-8 gap-6 mt-16">
-      <Link href="#"><FaFacebookF size={25}  className="hover:text-amber-600"/></Link>
-      <Link href="#"><FaTwitter size={25} className="hover:text-amber-600"/></Link>
-      <Link href="#"><FaGithub size={25} className="hover:text-amber-600"/></Link>
+          <Link href="#">
+            <FaFacebookF size={25} className="hover:text-green" />
+          </Link>
+          <Link href="#">
+            <FaTwitter size={25} className="hover:text-green" />
+          </Link>
+          <Link href="#">
+            <FaGithub size={25} className="hover:text-green" />
+          </Link>
         </div>
       </div>
     </nav>
