@@ -13,7 +13,7 @@ const page = () => {
   return (
     <section className="pt-24 md:pt-0 font-mont">
       <div className="w-[90%] mx-auto">
-        <header className="flex flex-col md:flex-row md:items-center  md:gap-[100px]">
+        <header className="flex flex-col-reverse md:flex-row md:items-center  md:gap-[100px]">
           <div className="flex flex-col gap-3 mx-auto md:flex-1 w-full md:mt-0 text-center md:text-left md:items-start md:justify-center">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold w-full">
               Unleash Your Creative Potential with our Expertise
