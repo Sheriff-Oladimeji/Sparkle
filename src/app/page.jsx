@@ -14,7 +14,7 @@ const page = () => {
       <div className="w-[90%] mx-auto">
         <header className="flex flex-col md:flex-row items-center md:gap-[100px]">
           <div className="flex-1">
-            <h1 className="text-4xl md:text-5xl font-semibold  header text-left w-full">
+            <h1 className="text-4xl md:text-5xl font-bold  header text-left w-full">
               Where Creativity <br />
               and Strategy Intersect
             </h1>
