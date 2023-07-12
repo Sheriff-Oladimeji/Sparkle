@@ -1,9 +1,9 @@
-"use client"
+"use client";
 import Link from "next/link";
 import React, { useState } from "react";
 import { VscChromeClose } from "react-icons/vsc";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
-import {FaFacebookF, FaGithub, FaTwitter} from "react-icons/fa"
+import { FaFacebookF, FaGithub, FaTwitter } from "react-icons/fa";
 
 const links = [
   {
@@ -59,7 +59,10 @@ const Navbar = () => {
       {/* mobile nav */}
       <div className="w-11/12 mx-auto flex justify-between items-center md:hidden h-[70px]">
         <h1 className="font-bold  text-3xl">Sparkle</h1>
-        <button onClick={handleNav} className="outline-none border-none background-none">
+        <button
+          onClick={handleNav}
+          className="outline-none border-none background-none"
+        >
           {nav ? <VscChromeClose size={30} /> : <HiOutlineMenuAlt3 size={30} />}
         </button>
       </div>
@@ -75,7 +78,8 @@ const Navbar = () => {
               href={link.url}
               className="text-[16px] hover:text-green font-bold hover:pl-3 duration-200"
               key={link.id}
-            onclick={handleNav}>
+              onClick={handleNav}
+            >
               {link.title}
             </Link>
           ))}

@@ -12,7 +12,7 @@ export const metadata = {
 
 const page = () => {
   return (
-    <section className="pt-24 md:pt-0 font-mont">
+    <section className="page">
       <div className="w-[90%] mx-auto">
         <header className="flex flex-col-reverse md:flex-row md:items-center  md:gap-[100px]">
           <div className="flex flex-col gap-3 mx-auto md:flex-1 w-full md:mt-0 text-center md:text-left md:items-start md:justify-center">
