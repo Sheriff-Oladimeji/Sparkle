@@ -38,17 +38,17 @@ const Footer = () => {
             <li>Privacy Policy</li>
           </ul>
         </div>
-        <div>
+        <div className="w-[100%] mx-auto md:w-full">
           <p className="font-bold mb-2">Join Our Newsletter</p>
-          <form action="" className="flex flex-col gap-2">
+          <form action="" className="flex md:flex-col gap-2">
             <input
               type="email"
               name="email"
-              className="bg-transparent text-white p-3 outline-none border border-white rounded-lg w-full"
+              className="bg-transparent text-white p-3 outline-none border border-white rounded-lg w-full "
             />
             <button
               type="submit"
-              className="flex items-center w-full bg-white text-black p-2 rounded-lg justify-center hover:bg-transparent hover:text-white gap-2"
+              className="flex items-center w-full bg-white text-black p-2 rounded-lg justify-center hover:bg-transparent hover:text-white gap-2 flex-1"
             >
               Subscribe
               <BsArrowRight size={25} />

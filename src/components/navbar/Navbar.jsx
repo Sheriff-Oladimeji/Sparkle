@@ -75,7 +75,7 @@ const Navbar = () => {
               href={link.url}
               className="text-[16px] hover:text-green font-bold hover:pl-3 duration-200"
               key={link.id}
-            >
+            onclick={handleNav}>
               {link.title}
             </Link>
           ))}

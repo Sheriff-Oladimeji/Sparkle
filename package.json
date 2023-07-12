@@ -9,14 +9,17 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@material-tailwind/react": "^2.0.5",
     "autoprefixer": "10.4.14",
     "eslint": "8.44.0",
     "eslint-config-next": "13.4.9",
     "next": "13.4.9",
     "postcss": "8.4.25",
     "react": "18.2.0",
+    "react-animated-slider": "^1.1.4",
     "react-dom": "18.2.0",
     "react-icons": "^4.10.1",
+    "react-multi-carousel": "^2.8.4",
     "tailwindcss": "3.3.2"
   }
 }

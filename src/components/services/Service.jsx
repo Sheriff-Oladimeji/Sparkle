@@ -27,8 +27,8 @@ import Image from "next/image";
 const Service = () => {
     return (
       <div className="my-6 text-black">
-        <h1 className=" text-3xl md:text-5xl font-lato font-bold mb-8">
-          Our Services
+        <h1 className=" text-3xl md:text-5xl font-lato font-bold mb-8 text-center">
+          Services we can help you with
         </h1>
         <div className="flex flex-col md:flex-row justify-between gap-10">
           {services.map((service) => (

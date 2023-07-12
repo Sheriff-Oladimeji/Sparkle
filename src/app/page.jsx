@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import Service from "@/components/services/Service";
+import Team from "@/components/team/Team";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -43,6 +44,7 @@ const page = () => {
         </header>
 
         <Service />
+        <Team/>
       </div>
     </section>
   );
