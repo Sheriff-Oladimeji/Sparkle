@@ -48,6 +48,7 @@ const team = [
     role: "Product Designer",
   },
 ];
+const deviceType = window.innerWidth > 1024 ? "desktop" : "mobile";
 
 const Team = () => {
   const responsive = {
@@ -68,10 +69,14 @@ const Team = () => {
       breakpoint: { max: 464, min: 0 },
       items: 1,
     },
+   
   };
+   
   return (
     <section>
-      <h1 className="text-3xl md:text-5xl font-bold text-center mb-4">Our Team</h1>
+      <h1 className="text-3xl md:text-5xl font-bold text-center mb-4">
+        Our Team
+      </h1>
 
       <Carousel
         swipeable={false}
@@ -80,16 +85,17 @@ const Team = () => {
         responsive={responsive}
         ssr={true} // means to render carousel on server-side.
         infinite={true}
-        autoPlay={true}
-        autoPlaySpeed={3000}
+        autoPlay={deviceType === "mobile" ? true : false}
+        autoPlaySpeed={1000}
         keyBoardControl={true}
         customTransition="all .5"
         transitionDuration={500}
         containerClass="carousel-container"
         removeArrowOnDeviceType={["tablet", "mobile"]}
+        deviceType={deviceType}
         dotListClass="custom-dot-list-style"
         itemClass="carousel-item-padding-40-px"
-        className="rounded-md md:rounded-none"
+        className="rounded-md"
       >
         {team.map((emp) => (
           <div key={emp.id} className="relative w-full h-[400px] text-white ">
@@ -100,7 +106,9 @@ const Team = () => {
               className="object-cover h-full w-full "
             />
             <div className="absolute z-10 bottom-6 left-6 bg-white h-[70px] w-[200px] p-2 text-black rounded-sm shadow-lg">
-              <h3 className="font-bold text-2xl font-lato text-red-600">{emp.name}</h3>
+              <h3 className="font-bold text-2xl font-lato text-red-600">
+                {emp.name}
+              </h3>
               <p className="font-semibold">{emp.role}</p>
             </div>
           </div>
