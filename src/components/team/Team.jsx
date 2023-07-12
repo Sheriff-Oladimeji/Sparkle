@@ -89,6 +89,7 @@ const Team = () => {
         removeArrowOnDeviceType={["tablet", "mobile"]}
         dotListClass="custom-dot-list-style"
         itemClass="carousel-item-padding-40-px"
+        className="rounded-md md:rounded-none"
       >
         {team.map((emp) => (
           <div key={emp.id} className="relative w-full h-[400px] text-white ">
