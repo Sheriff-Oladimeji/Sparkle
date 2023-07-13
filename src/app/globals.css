@@ -17,11 +17,15 @@
 .page{
   @apply pt-24 md:pt-0 font-mont;
 }
+.input{
+  @apply border border-black p-[12px] rounded-[10px] outline-none px-4;
+}
 .img {
   height: 100%;
   width: 500px;
   object-fit: contain;
   animation: move 3s infinite ease alternate;
+  
 }
 
 @keyframes move {
