@@ -44,7 +44,7 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 z-50 w-full bg-white shadow-md md:shadow-none md:relative">
       {/* desktop nav */}
       <div className="hidden w-[90%] mx-auto text-black md:flex justify-between items-center h-16">
-        <h1 className="font-bold  text-4xl">Sparkle</h1>
+        <Link href="/" className="font-bold  text-4xl cursor-pointer">Sparkle</Link>
         <div className="flex gap-8">
           {links.map((link) => (
             <div key={link.id} className="flex font-bold">
@@ -76,7 +76,7 @@ const Navbar = () => {
           {links.map((link) => (
             <Link
               href={link.url}
-              className="text-[16px] hover:text-green font-bold hover:pl-3 duration-200"
+              className="text-[20px] hover:text-green font-bold hover:pl-3 duration-200"
               key={link.id}
               onClick={handleNav}
             >
