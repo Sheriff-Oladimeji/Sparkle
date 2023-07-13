@@ -48,9 +48,13 @@ const team = [
     role: "Product Designer",
   },
 ];
-const deviceType = window.innerWidth > 1024 ? "desktop" : "mobile";
+
 
 const Team = () => {
+  const deviceType =
+    typeof window !== "undefined" && window.innerWidth > 1024
+      ? "desktop"
+      : "mobile";
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
