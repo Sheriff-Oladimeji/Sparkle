@@ -1,10 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
-export const metadata = {
-  title: "Contact us",
-  description: "How can we help?",
-};
+
 const Contact = () => {
   const [error, setError] = useState(false);
   const router = useRouter();
