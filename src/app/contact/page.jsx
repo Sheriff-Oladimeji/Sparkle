@@ -6,7 +6,7 @@ export const metadata = {
   description: "How can we help?",
 };
 const Contact = () => {
-  const [error, setError] = useState("")
+  const [error, setError] = useState(false)
    const router = useRouter();
   const handleSubmit = async(e) => {
     e.preventDefault()
@@ -15,9 +15,9 @@ const email = e.target[1].value
 const subject = e.target[2].value
 const message = e.target[3].value
     if (!name || !email || !subject || !message) {
-      return setError("All fields are  required")
+      return setError(!error)
     }
-    else {
+   
       try {
       const res = await fetch("/api/contact", {
         method: "POST",
@@ -34,9 +34,9 @@ const message = e.target[3].value
       res.status === 201 &&
         router.push("/contact/success?success=Information has been saved");
     } catch (err) {
-      throw new Error(err)
+      console.log(err)
     }
-    }
+   
 
   }
   return (
@@ -61,7 +61,7 @@ const message = e.target[3].value
             </p>
           </div>
         </div>
-        <form onSubmit={handleSubmit} className="flex-1 flex flex-col gap-4">
+        <form onSubmit={handleSubmit} className="flex-1 flex flex-col w-full gap-4">
           <input type="text" name="name" className="input" placeholder="Name" />
 
           <input
@@ -79,11 +79,11 @@ const message = e.target[3].value
           />
 
           <textarea
-            name="textarea"
+            name="message"
             className="input"
             placeholder="Message"
           ></textarea>
-          {error && error}
+          {error && <p className="text-red-600">All input must be filled</p>}
 
           <button>Submit</button>
         </form>
