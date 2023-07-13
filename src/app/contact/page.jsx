@@ -1,16 +1,18 @@
 "use client";
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
+import { BsFillTelephoneInboundFill } from "react-icons/bs"
+import {MdMarkEmailUnread} from "react-icons/md"
 
 const Contact = () => {
   const [error, setError] = useState(false);
   const router = useRouter();
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const name = e.target[0].value;
-    const email = e.target[1].value;
-    const subject = e.target[2].value;
-    const message = e.target[3].value;
+    const name = e.target.elements.name.value;
+    const email = e.target.elements.email.value;
+    const subject = e.target.elements.subject.value;
+    const message = e.target.elements.message.value;
     if (!name || !email || !subject || !message) {
       return setError(!error);
     }
@@ -37,37 +39,44 @@ const Contact = () => {
   return (
     <section className="page md:pt-4">
       <div className="w-[90%] mx-auto flex flex-col md:flex-row text-black items-center">
-        <div className="flex-1">
-          <h3>GET IN TOUCH</h3>
-          <h1>Do you have a project in your mind?</h1>
-          <div>
-            <p>
-              <span></span>
+        <div className="flex-1 flex flex-col gap-3">
+          <h3 className="text-xl text-green font-bold">GET IN TOUCH</h3>
+          <h1 className="text-3xl md:text-5xl font-lato font-bold">
+            Do you have a project
+            <br className="hidden md:block" /> in your mind?
+          </h1>
+          <div className="flex flex-col gap-4">
+            <p className="flex items-center gap-3 text-lg">
+              <BsFillTelephoneInboundFill />
               +2348147800112
             </p>
 
-            <p>
-              <span></span>
+            <p className="flex items-center gap-3 text-lg">
+              <MdMarkEmailUnread />
               hello@sparkle.com
             </p>
-            <p>
-              <span></span>
-              50 Wall Street Suite, 44150 Ohio, United States
-            </p>
+           
           </div>
         </div>
         <form
           onSubmit={handleSubmit}
-          className="flex-1 flex flex-col w-full gap-4"
+          className="flex flex-col w-full md:flex-1  gap-4 mt-6 "
         >
-          <input type="text" name="name" className="input" placeholder="Name" />
+          <div className="flex flex-col md:flex-row gap-4">
+            <input
+              type="text"
+              name="name"
+              className="input"
+              placeholder="Name"
+            />
 
-          <input
-            type="text"
-            name="email"
-            className="input"
-            placeholder="Email"
-          />
+            <input
+              type="text"
+              name="email"
+              className="input"
+              placeholder="Email"
+            />
+          </div>
 
           <input
             type="text"
@@ -81,9 +90,15 @@ const Contact = () => {
             className="input"
             placeholder="Message"
           ></textarea>
-          {error && <p className="text-red-600">All input must be filled</p>}
+          {error && (
+            <p className="text-red-700 font-semibold">
+              All input must be filled
+            </p>
+          )}
 
-          <button>Submit</button>
+          <button className="text-white bg-green border-none font-bold p-[10px] rounded-md w-32 text-center">
+            Submit
+          </button>
         </form>
       </div>
     </section>
