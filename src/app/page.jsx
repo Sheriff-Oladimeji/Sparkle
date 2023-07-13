@@ -1,4 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
+import Faq from "@/components/faq/Faq";
 import Service from "@/components/services/Service";
 import Team from "@/components/team/Team";
 import Image from "next/image";
@@ -44,7 +45,7 @@ const page = () => {
         </header>
 
         <Service />
-       
+       <Faq/>
       </div>
     </section>
   );
