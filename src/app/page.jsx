@@ -42,6 +42,25 @@ const page = () => {
         </div>
       </header>
 
+      <main className="py-8">
+        <div className="w-[90%] mx-auto flex justify-between">
+          <div>
+            <h1 className="text-3xl md:text-4xl font-bold font-lato">
+              Trusted by 200+ companies around the world
+            </h1>
+
+            <p>
+              We have had the pleasure of working with leading technology
+              companies, where we've helped shape their brand identities and
+              create captivating digital experiences that resonate with their
+              target audiences. Our innovative strategies have empowered these
+              companies to establish a strong online presence, drive customer
+              engagement, and achieve remarkable growth.
+            </p>
+          </div>
+          </div>
+      </main>
+
       <Service />
       <Faq />
     </section>
