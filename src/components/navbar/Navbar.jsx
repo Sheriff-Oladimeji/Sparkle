@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import React, { useState } from "react";
 import { VscChromeClose } from "react-icons/vsc";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
@@ -44,7 +45,9 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 z-50 w-full bg-white shadow-md md:shadow-none md:relative">
       {/* desktop nav */}
       <div className="hidden w-[90%] mx-auto text-black md:flex justify-between items-center h-16">
-        <Link href="/" className="font-bold  text-4xl cursor-pointer">Sparkle</Link>
+        <Link href="/" className="font-bold  text-4xl cursor-pointer">
+          Sparkle
+        </Link>
         <div className="flex gap-8">
           {links.map((link) => (
             <div key={link.id} className="flex font-bold">
@@ -59,12 +62,18 @@ const Navbar = () => {
       {/* mobile nav */}
       <div className="w-11/12 mx-auto flex justify-between items-center md:hidden h-[70px]">
         <h1 className="font-bold  text-3xl">Sparkle</h1>
-        <button
+        <motion.button
           onClick={handleNav}
           className="outline-none border-none background-none"
+          
+          whileTap={{
+        
+            rotate: 180,
+            borderRadius: "100%",
+          }}
         >
           {nav ? <VscChromeClose size={30} /> : <HiOutlineMenuAlt3 size={30} />}
-        </button>
+        </motion.button>
       </div>
 
       <div

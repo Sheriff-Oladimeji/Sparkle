@@ -2,7 +2,7 @@ import React from "react";
 import { BsArrowRight } from "react-icons/bs";
 const Footer = () => {
   return (
-    <footer className="bg-black text-white py-12 mt-12">
+    <footer className="bg-black text-white py-12">
       <div className="w-[90%] mx-auto grid md:grid-cols-5 gap-4">
         <div>
           <p className="font-bold text-lg font-lato">Company</p>

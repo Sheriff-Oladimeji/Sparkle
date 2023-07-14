@@ -37,7 +37,7 @@ const Contact = () => {
     }
   };
   return (
-    <section className="page md:pt-4">
+    <section className="page md:pt-4 mb-12">
       <div className="w-[90%] mx-auto flex flex-col md:flex-row text-black items-center">
         <div className="flex-1 flex flex-col gap-3">
           <h3 className="text-xl text-green font-bold">GET IN TOUCH</h3>

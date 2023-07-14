@@ -77,9 +77,9 @@ const Team = () => {
   };
    
   return (
-    <section>
-      <h1 className="text-3xl md:text-5xl font-bold text-center mb-4">
-        Our Team
+    <section className="mb-12 mt-6">
+      <h1 className="text-3xl md:text-5xl font-bold text-center mb-4 font-lato">
+        Our Team of Experts
       </h1>
 
       <Carousel
