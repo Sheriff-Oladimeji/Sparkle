@@ -1,5 +1,6 @@
 "use client"
 import React, { useState } from "react";
+import {AiOutlineDown, AiOutlineRight} from "react-icons/ai"
 
 const faqData = [
   {
@@ -40,22 +41,32 @@ const Faq = () => {
   };
 
   return (
-    <div className="mt-8 py-12 bg-[#F7F5EE] ">
+    <div className="mt-8 py-12 bg-[#F9FAFB] ">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl leading-9 font-extrabold text-gray-900 sm:text-4xl sm:leading-10 mb-6">
+        <h2 className="text-3xl md:text-4xl leading-9 font-extrabold text-gray-900 sm:text-4xl sm:leading-10 mb-6 text-center">
           Frequently Asked Questions
         </h2>
         <div className="space-y-8">
           {faqData.map((item) => (
-            <div key={item.id}>
-              <h3
-                className="text-xl leading-7 font-bold text-green cursor-pointer"
-                onClick={() => toggleItem(item.id)}
-              >
-                {item.question}
-              </h3>
+            <div
+              key={item.id}
+              className="bg-white rounded-xl border border-gray-300 py-8"
+              onClick={() => toggleItem(item.id)}
+            >
+              <div className="flex justify-between items-center w-[90%] mx-auto">
+                <h3 className="text-xl leading-7 font-bold cursor-pointer">
+                  {item.question}
+                </h3>
+                <button className="text-xl font-bold">
+                  {openItems.includes(item.id) ? (
+                    <AiOutlineDown size={20} />
+                  ) : (
+                    <AiOutlineRight size={20} />
+                  )}
+                </button>
+              </div>
               {openItems.includes(item.id) && (
-                <div className="mt-2 text-gray-700">
+                <div className="mt-4 text-gray-700 w-[90%] mx-auto">
                   <p>{item.answer}</p>
                 </div>
               )}
