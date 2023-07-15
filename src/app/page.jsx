@@ -51,7 +51,7 @@ const page = () => {
         </div>
       </header>
 
-      <main className="my-12">
+      <main className="my-16">
         <div className="w-[90%] mx-auto flex flex-col md:flex-row justify-between gap-10">
           <div className="flex-1 text-center md:text-left">
             <h1 className="text-3xl sm:text-4xl  font-bold font-lato max-w-md leading-10">
@@ -65,7 +65,7 @@ const page = () => {
               target audiences.
             </p>
           </div>
-          <div className="flex-1 grid grid-cols-3 gap-4">
+          <div className="flex-1 grid grid-cols-3 gap-4 text-center">
             <Image src={google} alt="" className="icons" />
             <Image src={meta} alt="" className="icons" />
             <Image src={linkedin} alt="" className="icons" />

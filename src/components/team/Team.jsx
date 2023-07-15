@@ -89,7 +89,7 @@ const Team = () => {
         responsive={responsive}
         ssr={true} // means to render carousel on server-side.
         infinite={true}
-        autoPlay={deviceType === "mobile" ? true : false}
+        autoPlay={deviceType !== "mobile" ? true : false}
         autoPlaySpeed={5000}
         keyBoardControl={true}
         customTransition="all .5"
@@ -102,14 +102,14 @@ const Team = () => {
         className="rounded-md"
       >
         {team.map((emp) => (
-          <div key={emp.id} className="relative w-full h-[400px] text-white ">
+          <div key={emp.id} className="relative w-full h-[500px] text-white ">
             <Image
               src={emp.imgUrl}
               alt=""
               fill={true}
               className="object-cover h-full w-full "
             />
-            <div className="absolute z-10 bottom-6 left-6 bg-white h-[70px] w-[200px] p-2 text-black rounded-sm shadow-lg">
+            <div className="absolute z-10 bottom-6 left-6 bg-white h-[70px] w-[200px] p-2 text-black rounded-md shadow-lg">
               <h3 className="font-bold text-2xl font-lato text-red-600">
                 {emp.name}
               </h3>
