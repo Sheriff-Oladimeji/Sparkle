@@ -27,6 +27,9 @@
   animation: move 3s infinite ease alternate;
   
 }
+.icons{
+  @apply w-16;
+}
 
 @keyframes move {
   from {

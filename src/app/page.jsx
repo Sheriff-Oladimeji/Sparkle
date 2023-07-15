@@ -6,6 +6,15 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { BsArrowRight } from "react-icons/bs";
+import google from "public/google.png";
+import github from "public/github.png";
+import twitch from "public/twitch.png";
+import reddit from "public/reddit.png";
+import twitter from "public/twitter.png";
+import figma from "public/figma.png";
+import pinterest from "public/pinterest.png";
+import meta from "public/meta.png";
+import linkedin from "public/linkedin.png";
 export const metadata = {
   title: "Sparkle",
   description: "Empower your brand with our creative expertise",
@@ -42,23 +51,32 @@ const page = () => {
         </div>
       </header>
 
-      <main className="py-8">
-        <div className="w-[90%] mx-auto flex justify-between">
-          <div>
-            <h1 className="text-3xl md:text-4xl font-bold font-lato">
+      <main className="my-12">
+        <div className="w-[90%] mx-auto flex flex-col md:flex-row justify-between gap-10">
+          <div className="flex-1 text-center md:text-left">
+            <h1 className="text-3xl sm:text-4xl  font-bold font-lato max-w-md leading-10">
               Trusted by 200+ companies around the world
             </h1>
 
-            <p>
+            <p className="max-w-md mt-4">
               We have had the pleasure of working with leading technology
               companies, where we've helped shape their brand identities and
               create captivating digital experiences that resonate with their
-              target audiences. Our innovative strategies have empowered these
-              companies to establish a strong online presence, drive customer
-              engagement, and achieve remarkable growth.
+              target audiences.
             </p>
           </div>
+          <div className="flex-1 grid grid-cols-3 gap-4">
+            <Image src={google} alt="" className="icons" />
+            <Image src={meta} alt="" className="icons" />
+            <Image src={linkedin} alt="" className="icons" />
+            <Image src={reddit} alt="" className="icons" />
+            <Image src={twitter} alt="" className="icons" />
+            <Image src={figma} alt="" className="icons" />
+            <Image src={twitch} alt="" className="icons" />
+            <Image src={github} alt="" className="icons" />
+            <Image src={pinterest} alt="" className="icons" />
           </div>
+        </div>
       </main>
 
       <Service />
