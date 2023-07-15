@@ -55,17 +55,17 @@ const page = () => {
         <div className="w-[90%] mx-auto flex flex-col md:flex-row justify-between gap-10">
           <div className="flex-1 text-center md:text-left">
             <h1 className="text-3xl sm:text-4xl  font-bold font-lato max-w-md leading-10">
-              Trusted by 200+ companies around the world
+              Trusted by 100+ companies around the world
             </h1>
 
-            <p className="max-w-md mt-4">
+            <p className="max-w-md mt-4 leading-8">
               We have had the pleasure of working with leading technology
               companies, where we've helped shape their brand identities and
               create captivating digital experiences that resonate with their
               target audiences.
             </p>
           </div>
-          <div className="flex-1 grid grid-cols-3 gap-4 text-center">
+          <div className="flex-1 grid grid-cols-3 gap-8 text-center">
             <Image src={google} alt="" className="icons" />
             <Image src={meta} alt="" className="icons" />
             <Image src={linkedin} alt="" className="icons" />

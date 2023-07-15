@@ -22,13 +22,9 @@ const links = [
     title: "Portfolio",
     url: "/portfolio",
   },
+ 
   {
     id: 4,
-    title: "Blog",
-    url: "/blog",
-  },
-  {
-    id: 5,
     title: "Contact",
     url: "/contact",
   },
@@ -48,7 +44,7 @@ const Navbar = () => {
         <Link href="/" className="font-bold  text-4xl cursor-pointer">
           Sparkle
         </Link>
-        <div className="flex gap-8">
+        <div className="flex gap-10">
           {links.map((link) => (
             <div key={link.id} className="flex font-bold">
               <Link href={link.url} className="text-[16px] hover:text-green">
@@ -77,7 +73,7 @@ const Navbar = () => {
           nav ? "h-screen" : "h-0"
         } overflow-hidden transition-all duration-500 md:hidden`}
       >
-        <div className="flex flex-col gap-8 z-50 pt-12 px-8">
+        <div className="flex flex-col gap-10 z-50 pt-12 px-8">
           {links.map((link) => (
             <Link
               href={link.url}

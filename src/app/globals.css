@@ -18,7 +18,7 @@
   @apply pt-24 md:pt-0 font-mont;
 }
 .input{
-  @apply border border-gray-600 p-[12px] rounded-[10px] outline-none px-4 w-full;
+  @apply border border-gray-600 p-[12px] rounded-[10px] outline-none px-4 w-full focus:outline-none ;
 }
 .img {
   height: 100%;

@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <footer className="bg-black text-white py-12">
-      <div className="w-[90%] mx-auto grid md:grid-cols-5 gap-4">
+      <div className="w-[90%] mx-auto grid md:grid-cols-6 gap-4">
         <div>
           <p className="font-bold text-lg font-lato">Company</p>
           <ul className="text-[#bbb] flex flex-col gap-2">
@@ -38,17 +38,19 @@ const Footer = () => {
             <li>Privacy Policy</li>
           </ul>
         </div>
-        <div className="w-[100%] mx-auto md:w-full">
-          <p className="font-bold mb-2">Join Our Newsletter</p>
-          <form action="" className="flex md:flex-col gap-2">
+        <div className="w-[100%] mx-auto  md:col-span-2">
+          <p className="font-bold  mb-2">Subscribe to Our Newsletter</p>
+          <form action="" className="flex  relative">
             <input
               type="email"
               name="email"
-              className="bg-transparent text-white p-3 outline-none border border-white rounded-lg w-full"
+              id="email"
+              className="bg-transparent text-white p-3 outline-none border border-white rounded-lg w-full focus:outline-none "
             />
             <button
               type="submit"
-              className="flex items-center w-24 bg-white text-black p-2 rounded-lg justify-center hover:bg-transparent hover:text-white gap-2 flex-1"
+              name="button"
+              className="bg-white text-black p-2 rounded-lg hover:bg-transparent hover:text-white gap-2 flex-1 focus:outline-none absolute right-0  top-0 h-full rounded-r-md"
             >
               Subscribe
             </button>
