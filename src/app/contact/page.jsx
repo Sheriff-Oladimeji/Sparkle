@@ -87,7 +87,7 @@ const Contact = () => {
 
           <textarea
             name="message"
-            className="input"
+            className="input h-32"
             placeholder="Message"
           ></textarea>
           {error && (

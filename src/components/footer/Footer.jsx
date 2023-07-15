@@ -1,5 +1,5 @@
 import React from "react";
-import { BsArrowRight } from "react-icons/bs";
+
 const Footer = () => {
   return (
     <footer className="bg-black text-white py-12">
@@ -44,14 +44,13 @@ const Footer = () => {
             <input
               type="email"
               name="email"
-              className="bg-transparent text-white p-3 outline-none border border-white rounded-lg w-full "
+              className="bg-transparent text-white p-3 outline-none border border-white rounded-lg w-full"
             />
             <button
               type="submit"
-              className="flex items-center w-full bg-white text-black p-2 rounded-lg justify-center hover:bg-transparent hover:text-white gap-2 flex-1"
+              className="flex items-center w-24 bg-white text-black p-2 rounded-lg justify-center hover:bg-transparent hover:text-white gap-2 flex-1"
             >
               Subscribe
-              <BsArrowRight size={25} />
             </button>
           </form>
         </div>
