@@ -57,7 +57,7 @@ const Faq = () => {
                 <h3 className="text-xl leading-7 font-bold cursor-pointer">
                   {item.question}
                 </h3>
-                <button className="text-xl font-bold">
+                <button className="text-xl font-bold" name="button">
                   {openItems.includes(item.id) ? (
                     <AiOutlineDown size={20} />
                   ) : (
