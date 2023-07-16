@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import data from "./data";
 import Image from "next/image";
+import Link from "next/link";
 const Portfolio = () => {
   const [works, setWorks] = useState(data);
 
@@ -14,7 +15,7 @@ const Portfolio = () => {
         <div></div>
         <main className="grid sm:grid-cols-2 md:grid-cols-3 gap-12 my-8">
           {works.map((work) => (
-            <div key={work.id} className="w-full relative h-[400px] shadow-lg hover:scale-105 duration-200">
+            <Link href={`/portfolio/${work.id}`} key={work.id} className="w-full relative h-[400px] shadow-lg hover:scale-105 duration-200">
               <Image
                 src={work.imgUrl}
                 alt={work.title}
@@ -28,7 +29,7 @@ const Portfolio = () => {
                 </h3>
                 <p>{work.category}</p>
               </div>
-            </div>
+            </Link>
           ))}
         </main>
       </div>
