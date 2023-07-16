@@ -31,12 +31,12 @@ const PortfolioItem = ({ params }) => {
               src={selected.imgUrl}
               width={300}
               height={300}
-              className="w-full h-[400px] object-cover md:object-cover"
+              className="w-full h-[400px] object-cover md:object-cover rounded-lg"
             />
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-between mt-12">
+        <div className="flex flex-col md:flex-row justify-between mt-16 mb-10">
           <div className=" md:w-[70%]">
             <h3 className="text-green text-2xl font-bold font-lato mb-2">
               {selected.category}
@@ -48,8 +48,8 @@ const PortfolioItem = ({ params }) => {
             ))}
           </div>
           <div className="flex-1  md:w-[30%]">
-            <h3 className="text-2xl font-bold font-lato">Tags</h3>
-            <div className="flex flex-col  gap-6 ">
+            <h3 className="text-2xl font-bold font-lato text-green">Related Tags</h3>
+            <div className="flex flex-col  gap-4 ">
               {selected.tags.map((item, index) => (
                 <p key={index} className=" font-bold p-2  flex items-center">
                   {item}
