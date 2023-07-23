@@ -51,30 +51,7 @@ const team = [
 
 
 const Team = () => {
-  const deviceType =
-    typeof window !== "undefined" && window.innerWidth > 1024
-      ? "desktop"
-      : "mobile";
-  const responsive = {
-    superLargeDesktop: {
-      // the naming can be any, depends on you.
-      breakpoint: { max: 4000, min: 3000 },
-      items: 5,
-    },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 3,
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2,
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
-    },
-   
-  };
+    
    
   return (
     <section className="mb-12 mt-6">
@@ -82,25 +59,7 @@ const Team = () => {
         Our Team of Experts
       </h1>
 
-      <Carousel
-        swipeable={false}
-        draggable={false}
-        showDots={true}
-        responsive={responsive}
-        ssr={true} // means to render carousel on server-side.
-        infinite={true}
-        autoPlay={deviceType !== "mobile" ? true : false}
-        autoPlaySpeed={5000}
-        keyBoardControl={true}
-        customTransition="all .5"
-        transitionDuration={500}
-        containerClass="carousel-container"
-        removeArrowOnDeviceType={["tablet", "mobile"]}
-        deviceType={deviceType}
-        dotListClass="custom-dot-list-style"
-        itemClass="carousel-item-padding-40-px"
-        className="rounded-md"
-      >
+      <main className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
         {team.map((emp) => (
           <div key={emp.id} className="relative w-full h-[500px] text-white ">
             <Image
@@ -116,9 +75,10 @@ const Team = () => {
               <p className="font-semibold">{emp.role}</p>
             </div>
           </div>
+                  
         ))}
-      </Carousel>
-    </section>
+        </main>
+     </section>
   );
 };
 
