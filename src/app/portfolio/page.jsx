@@ -12,22 +12,27 @@ const Portfolio = () => {
   return (
     <section className="page mb-12">
       <div className="w-[90%] mx-auto">
-        <div></div>
+        <div className="my-8">
+          <h3 className="text-green text-xl">PORTFOLIO</h3>
+          <h1 className="text-3xl md:text-4xl font-bold font-lato">Some of our best projects</h1>
+        </div>
         <main className="grid sm:grid-cols-2 md:grid-cols-3 gap-12 my-8">
           {works.map((work) => (
-            <Link href={`/portfolio/${work.id}`} key={work.id} className="w-full relative h-[400px] shadow-lg hover:scale-105 duration-200">
+            <Link
+              href={`/portfolio/${work.id}`}
+              key={work.id}
+              className="w-full relative h-[400px] duration-200"
+            >
               <Image
                 src={work.imgUrl}
                 alt={work.title}
                 width={400}
                 height={300}
-                className="w-full h-[320px] object-cover rounded-t-lg"
+                className="w-full h-[320px] object-cover  hover:scale-105 "
               />
-              <div className="py-4 flex flex-col justify-center px-8 w-full mx-auto space-y-2 ">
-                <h3 className="font-bold text-red-600 font-lato text-xl">
-                  {work.title}
-                </h3>
-                <p>{work.category}</p>
+              <div className="py-6 flex flex-col justify-center  w-full mx-auto space-y-1 ">
+                <h3 className="font-bold   text-2xl">{work.title}</h3>
+                <p className="text-lg font-lato">{work.category}</p>
               </div>
             </Link>
           ))}
