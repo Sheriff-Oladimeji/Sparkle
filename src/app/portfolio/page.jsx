@@ -28,7 +28,7 @@ const Portfolio = () => {
                 alt={work.title}
                 width={400}
                 height={300}
-                className="w-full h-[320px] object-cover  hover:scale-105 "
+                className="w-full h-[320px] object-cover   "
               />
               <div className="py-6 flex flex-col justify-center  w-full mx-auto space-y-1 ">
                 <h3 className="font-bold   text-2xl">{work.title}</h3>
