@@ -16,7 +16,7 @@ Sparkle is a creative agency project built with Next.js, MongoDB, Tailwind CSS, 
 - Next.js
 - MongoDB
 - Tailwind CSS
-- React-multi-carousel
+
 
 ## Usage
 
