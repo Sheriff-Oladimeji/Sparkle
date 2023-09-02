@@ -30,9 +30,7 @@
 .icons{
   @apply w-16;
 }
-.cursive{
-  font-family: cursive;
-}
+
 
 @keyframes move {
   from {

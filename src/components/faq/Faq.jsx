@@ -50,7 +50,7 @@ const Faq = () => {
           {faqData.map((item) => (
             <div
               key={item.id}
-              className="bg-white rounded-xl border border-gray-300 py-8"
+              className="bg-white rounded-xl border-2 border-gray-300 py-8"
               onClick={() => toggleItem(item.id)}
             >
               <div className="flex justify-between items-center w-[90%] mx-auto">
