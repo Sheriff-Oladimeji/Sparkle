@@ -15,6 +15,8 @@ import figma from "public/figma.png";
 import pinterest from "public/pinterest.png";
 import meta from "public/meta.png";
 import linkedin from "public/linkedin.png";
+import Testimonial from "@/components/testimonials/Testimonial";
+import Testimonials from "@/components/testimonials/Testimonial";
 export const metadata = {
   title: "Sparkle",
   description: "Empower your brand with our creative expertise",
@@ -80,6 +82,7 @@ const page = () => {
       </main>
 
       <Service />
+      <Testimonials />
       <Faq />
     </section>
   );

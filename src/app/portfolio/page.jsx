@@ -1,10 +1,18 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import data from "./data";
 import Image from "next/image";
 import Link from "next/link";
+
+import AOS from "aos";
+import "aos/dist/aos.css"; 
+
 const Portfolio = () => {
   const [works, setWorks] = useState(data);
+   useEffect(() => {
+     AOS.init({ duration: 1000 }); // Initialize AOS
+   }, []);
+
 
   const filterCategory = (selectedCategory) => {
     setWorks(data.filter((work) => work.category === selectedCategory));
@@ -14,7 +22,9 @@ const Portfolio = () => {
       <div className="w-[90%] mx-auto">
         <div className="my-8">
           <h3 className="text-green text-xl">PORTFOLIO</h3>
-          <h1 className="text-3xl md:text-4xl font-bold font-lato">Some of our best projects</h1>
+          <h1 className="text-3xl md:text-4xl font-bold font-lato">
+            Some of our best projects
+          </h1>
         </div>
         <main className="grid sm:grid-cols-2 md:grid-cols-3 gap-12 my-8">
           {works.map((work) => (
@@ -22,6 +32,7 @@ const Portfolio = () => {
               href={`/portfolio/${work.id}`}
               key={work.id}
               className="w-full relative h-[400px] duration-200"
+              data-aos="fade-up"
             >
               <Image
                 src={work.imgUrl}

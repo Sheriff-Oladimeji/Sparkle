@@ -26,7 +26,7 @@ import Image from "next/image";
 
 const Service = () => {
     return (
-      <div className="my-6 text-black w-[90%] mx-auto">
+      <div className="my-20 text-black w-[90%] mx-auto">
         <h1 className=" text-3xl md:text-5xl font-lato font-bold mb-8 text-center">
           Services we can help you with
         </h1>
