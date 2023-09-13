@@ -1,8 +1,11 @@
-import React from "react";
+"use client"
+import React, { useEffect } from "react";
 import   brand from "public/brand.png"
 import   website from "public/website.png"
 import design from "public/design.png"
 import Image from "next/image";
+import AOS from "aos";
+import "aos/dist/aos.css"; 
  const services = [
    {
      id: 1,
@@ -25,6 +28,9 @@ import Image from "next/image";
  ];
 
 const Service = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
     return (
       <div className="my-20 text-black w-[90%] mx-auto">
         <h1 className=" text-3xl md:text-5xl font-lato font-bold mb-8 text-center">
@@ -35,6 +41,7 @@ const Service = () => {
             <div
               key={service.id}
               className="border-2 border-black text-center py-4"
+              data-aos="fade-left"
             >
               <div className="w-[90%] mx-auto flex flex-col items-center justify-center ">
                 <Image

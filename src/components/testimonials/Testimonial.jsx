@@ -18,7 +18,7 @@ const Testimonials = () => {
       </h1>
       <main
         className="grid md:grid-cols-3 sm:grid-cols-2 gap-8"
-        data-aos="fade-left"
+       
       >
         {data.map((card) => (
           <div

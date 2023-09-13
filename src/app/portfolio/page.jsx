@@ -10,7 +10,7 @@ import "aos/dist/aos.css";
 const Portfolio = () => {
   const [works, setWorks] = useState(data);
    useEffect(() => {
-     AOS.init({ duration: 1000 }); // Initialize AOS
+     AOS.init({ duration: 1000 }); 
    }, []);
 
 

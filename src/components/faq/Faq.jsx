@@ -41,7 +41,7 @@ const Faq = () => {
   };
 
   return (
-    <div className="mt-8 py-12 bg-[#f1f4f7] ">
+    <div className="mt-8 py-12 bg-[#f2f4f5] ">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl md:text-4xl leading-9 font-extrabold text-gray-900 sm:text-4xl sm:leading-10 mb-6 text-center">
           Frequently Asked Questions
