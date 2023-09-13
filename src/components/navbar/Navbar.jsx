@@ -40,14 +40,14 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 z-50 w-full bg-white shadow-md md:shadow-none md:relative">
       {/* desktop nav */}
-      <div className="hidden w-[90%] mx-auto text-black md:flex justify-between items-center h-16">
+      <div className="hidden w-[90%] mx-auto text-black md:flex justify-between items-center h-16 md:py-10 ">
         <Link href="/" className="font-bold  text-4xl cursor-pointer cursive">
           Sparkle
         </Link>
         <div className="flex gap-10">
           {links.map((link) => (
             <div key={link.id} className="flex font-bold">
-              <Link href={link.url} className="text-[16px] hover:text-green">
+              <Link href={link.url} className="text-[18px] hover:text-green">
                 {link.title}
               </Link>
             </div>

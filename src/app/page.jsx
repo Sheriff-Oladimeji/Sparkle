@@ -25,7 +25,7 @@ export const metadata = {
 const page = () => {
   return (
     <section className="page">
-      <header className="flex flex-col-reverse md:flex-row md:items-center  md:gap-[100px] w-[90%] mx-auto">
+      <header className="flex flex-col-reverse md:flex-row items-center  md:gap-[100px] w-[90%] mx-auto">
         <div className="flex flex-col gap-3 mx-auto md:flex-1 w-full md:mt-0 text-center md:text-left md:items-start md:justify-center">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold w-full cursor-pointer">
             Unleash Your Creative Potential with our Expertise

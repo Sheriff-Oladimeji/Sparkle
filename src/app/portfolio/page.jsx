@@ -31,7 +31,7 @@ const Portfolio = () => {
             <Link
               href={`/portfolio/${work.id}`}
               key={work.id}
-              className="w-full relative  duration-200  rounded-lg shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] "
+              className="w-full relative  duration-200  rounded-md shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] "
               data-aos="fade-up"
             >
               <Image
@@ -39,7 +39,7 @@ const Portfolio = () => {
                 alt={work.title}
                 width={400}
                 height={300}
-                className="w-full h-[320px] object-cover rounded-t-lg"
+                className="w-full h-[320px] object-cover rounded-t-md"
               />
               <div className="py-6 flex flex-col justify-center  w-full mx-auto space-y-1 px-2   ">
                 <h3 className="font-bold   text-2xl">{work.title} </h3>

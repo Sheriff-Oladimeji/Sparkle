@@ -41,7 +41,7 @@ const Service = () => {
             <div
               key={service.id}
               className="border-2 border-black text-center py-4"
-              data-aos="fade-left"
+              data-aos="fade-up"
             >
               <div className="w-[90%] mx-auto flex flex-col items-center justify-center ">
                 <Image
