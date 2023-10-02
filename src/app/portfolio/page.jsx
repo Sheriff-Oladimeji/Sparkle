@@ -41,7 +41,7 @@ const Portfolio = () => {
                 height={300}
                 className="w-full h-[320px] object-cover rounded-t-md"
               />
-              <div className="py-6 flex flex-col justify-center  w-full mx-auto space-y-1 px-2   ">
+              <div className="py-6 flex flex-col justify-center  w-full mx-auto space-y-1 px-4   ">
                 <h3 className="font-bold   text-2xl">{work.title} </h3>
                 <p className="text-lg font-lato">{work.category}</p>
               </div>

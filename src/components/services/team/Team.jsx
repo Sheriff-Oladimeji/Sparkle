@@ -61,7 +61,7 @@ const Team = () => {
 
       <main className="grid sm:grid-cols-2 md:grid-cols-3 gap-12">
         {team.map((emp) => (
-          <div key={emp.id} className="relative w-full h-[500px] text-white  shadow-md">
+          <div key={emp.id} className="relative w-full h-[500px] text-white  shadow-md ">
             <Image
               src={emp.imgUrl}
               alt=""
