@@ -54,14 +54,14 @@ const Team = () => {
     
    
   return (
-    <section className="mb-12 mt-6">
-      <h1 className="text-3xl md:text-5xl font-bold text-center mb-4 font-lato">
+    <section className="my-12">
+      <h1 className="text-3xl md:text-5xl font-bold text-center mb-8 font-lato">
         Our Team of Experts
       </h1>
 
-      <main className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <main className="grid sm:grid-cols-2 md:grid-cols-3 gap-12">
         {team.map((emp) => (
-          <div key={emp.id} className="relative w-full h-[500px] text-white ">
+          <div key={emp.id} className="relative w-full h-[500px] text-white  shadow-md">
             <Image
               src={emp.imgUrl}
               alt=""
